@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<meta charset="utf-8" name="viewport"
+		content="width=device-width, initial-scale=1"
+		http-equiv="X-UA-Conpatible" />
+	<h:outputStylesheet library="css" name="bootstrap.min.css" />
+	<title>Ajouter étudiant</title>
+
+</h:head>
+<h:body style="background-color: #deefef;">
+	<center>
+		<h2>
+			<h:outputText value="Ajouter un étudiant" />
+		</h2>
+	</center>
+	<center>
+		<h:form id="form">
+			<div>
+				<!-- Nom -->
+				<input value="test"/>
+				<h:outputLabel> Nom </h:outputLabel>
+				<div>
+					<h:inputText value="#{EtudiantBean.nomEtudiant}" style="width: 200px; height: 20px;"></h:inputText>
+				</div>
+				<br />
+				<!-- Prénom -->
+				<h:outputLabel> Prénom </h:outputLabel>
+				<div>
+					<h:inputText value="#{EtudiantBean.prenomEtudiant}" style="width: 200px; height: 20px;"></h:inputText>
+				</div>
+				<br />
+				<!-- CNE -->
+				<h:outputLabel> CNE </h:outputLabel>
+				<div>
+					<h:inputText value="#{EtudiantBean.cneEtudiant}" style="width: 200px; height: 20px;"></h:inputText>
+				</div>
+				<br />
+				<!-- Adresse -->
+				<h:outputLabel> Adresse </h:outputLabel>
+				<div>
+					<h:inputText value="#{EtudiantBean.adresseEtudiant}" style="width: 200px; height: 20px;"></h:inputText>
+				</div>
+				<br />
+				<!-- Niveau -->
+				<h:outputLabel> Niveau </h:outputLabel>
+				<div>
+					<h:inputText value="#{EtudiantBean.niveauEtudiant}" style="width: 200px; height: 20px;"></h:inputText>
+				</div>
+				<br />
+			</div>
+			<br />
+			<!-- Bouton Save -->
+			<div>
+				<h:commandButton value="Save"
+					action="#{EtudiantBean.addEtudiant(EtudiantBean)}"></h:commandButton>
+			</div>
+			<br />
+			<!-- Lien pour la liste des étudiants -->
+			<div>
+				<h:outputLink value="listEtudiants.xhtml"> Liste des étudiants </h:outputLink>
+			</div>
+
+		</h:form>
+	</center>
+</h:body>
+
+</html>
